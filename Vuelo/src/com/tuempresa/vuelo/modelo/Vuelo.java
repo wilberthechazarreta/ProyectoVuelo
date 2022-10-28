@@ -28,4 +28,8 @@ public class Vuelo extends Identificable{
 	@ManyToOne(fetch = FetchType.LAZY , optional = true)
 	@DescriptionsList(descriptionProperties = "destino")
 	CiudadDestino ciuDestino;
+	
+	@ManyToOne
+	@DescriptionsList
+	Tripulacion tripulacion;
 }

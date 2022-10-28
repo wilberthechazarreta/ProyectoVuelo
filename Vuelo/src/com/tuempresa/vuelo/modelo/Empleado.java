@@ -2,26 +2,25 @@ package com.tuempresa.vuelo.modelo;
 
 import javax.persistence.*;
 
+import org.openxava.annotations.*;
+
 import lombok.*;
 
-@Entity
-@Getter @Setter
-public class Direccion {
-	
-	@Id
-	@Column(length = 32)
-	String calle;
+@Entity @Getter @Setter
+public class Empleado extends Identificable {
 	
 	@Column(length = 64)
-	String colonia;
+	String nombres;
 	
 	@Column(length = 64)
-	String municipio;
+	String apellidos;
 	
+	@File
 	@Column(length = 32)
-	String estado;
+	String fotografia;
 	
 	@Column(length = 32)
 	String pais;
 	
+
 }
