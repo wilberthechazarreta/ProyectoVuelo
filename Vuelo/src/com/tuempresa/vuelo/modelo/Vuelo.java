@@ -1,7 +1,5 @@
 package com.tuempresa.vuelo.modelo;
 
-import java.time.*;
-
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -13,23 +11,23 @@ import lombok.*;
 @Getter @Setter
 public class Vuelo extends Identificable{
 	
+
 	@DefaultValueCalculator(CurrentYearCalculator.class)
 	@Column(length = 4)
 	int anyo;
 	
-	@Required
-	@DefaultValueCalculator(CurrentLocalDateCalculator.class)
-	LocalDate fecha;
-	
 	@ManyToOne(fetch = FetchType.LAZY, optional = true)
 	@DescriptionsList(descriptionProperties = "origen")
-	CiudadOrigen ciudOrigen;
+	CiudadOrigen ciudadOrigen;
 	
 	@ManyToOne(fetch = FetchType.LAZY , optional = true)
 	@DescriptionsList(descriptionProperties = "destino")
-	CiudadDestino ciuDestino;
+	CiudadDestino ciudadDestino;
 	
 	@ManyToOne
 	@DescriptionsList
 	Tripulacion tripulacion;
+	
+	@ManyToOne
+	Pasajero pasajero;
 }

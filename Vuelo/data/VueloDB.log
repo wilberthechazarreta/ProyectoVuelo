@@ -1,5 +1,7 @@
 /*C3*/SET SCHEMA PUBLIC
 DISCONNECT
 /*C4*/SET SCHEMA PUBLIC
-alter table VUELO.AEROLINEA add column listaPaises_oid varchar(32)
-alter table Vuelo.Aerolinea add constraint FK732aumf11n8kypljy9ikkmqxn foreign key (listaPaises_oid) references Vuelo.ListaPaises
+create table Vuelo.Empleado (oid varchar(32) not null, apellidos varchar(64), fotografia varchar(32), nombres varchar(64), pais varchar(32), primary key (oid))
+SET SCHEMA VUELO
+INSERT INTO VUELO VALUES('402881c5841e35f401841e3685450000',2022,'2022-10-28',NULL,NULL,'402881c5841ddf7901841ddfbf670001','402881c5841ddf7901841ddf96150000',NULL,NULL)
+COMMIT

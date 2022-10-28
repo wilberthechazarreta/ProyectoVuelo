@@ -19,8 +19,8 @@ public class Empleado extends Identificable {
 	@Column(length = 32)
 	String fotografia;
 	
-	@Column(length = 32)
-	String pais;
+	@ManyToOne
+	Direccion direccion;
 	
 
 }
