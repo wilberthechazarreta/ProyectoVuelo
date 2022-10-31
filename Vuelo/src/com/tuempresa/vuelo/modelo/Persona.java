@@ -8,12 +8,14 @@ import lombok.*;
 
 @Entity
 @Getter @Setter
+@View(name = "Corta" , members = "nombres, apellidos; " +
+                                 "fotografia")
 public class Persona extends Identificable {
 	
-	@Column(length = 64)
+	@Column(length = 23)
 	String nombres;
 	
-	@Column(length = 64)
+	@Column(length = 23)
 	String apellidos;
 	
 	@File
