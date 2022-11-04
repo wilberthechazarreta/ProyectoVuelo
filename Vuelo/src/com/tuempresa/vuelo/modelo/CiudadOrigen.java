@@ -9,7 +9,5 @@ public class CiudadOrigen extends Identificable{
 	
 	@Column(length = 50)
 	String origen;
-
-	
 	
 }
